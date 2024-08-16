@@ -13,5 +13,10 @@ describe('Página Principal', () => {
     cy.getByData('dispositivosProtegidos').contains('Seus dispositivos móveis (computador e laptop) protegidos por uma mensalidade simbólica.')
   })
 
-  it('')
+  it('Deve renderizar os h3', () => {
+    cy.getByData('h3ContaGratuita').contains('Conta e cartão gratuitos')
+    cy.getByData('h3SacarGratuitamente').contains('Saques sem custo')
+    cy.getByData('h3AcumularPontos').contains('Programa de pontos')
+    cy.getByData('h3SeguroDispositivos').contains('Seguro Dispositivos')
+  })
 })

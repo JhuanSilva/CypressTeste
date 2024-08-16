@@ -26,7 +26,7 @@ export default function Inicio() {
             <div className={estilos.vantagens__itens}>
               <div className={estilos.vantagens__item}>
                 <img src={presente} alt="ícone de um presente" />
-                <h3>Conta e cartão gratuitos</h3>
+                <h3 data-test="h3ContaGratuita">Conta e cartão gratuitos</h3>
                 <p data-test="semTarifa">
                   Isso mesmo, nossa conta é digital, sem custo fixo e mais que
                   isso: sem tarifa de manutenção.
@@ -34,7 +34,7 @@ export default function Inicio() {
               </div>
               <div className={estilos.vantagens__item}>
                 <img src={saque} alt="ícone de uma mão segurando um dinheiro" />
-                <h3>Saques sem custo</h3>
+                <h3 data-test="h3SacarGratuitamente">Saques sem custo</h3>
                 <p data-test="sacarGratuitamente">
                   Você pode sacar gratuitamente 4x por mês de qualquer Banco
                   24h.
@@ -42,7 +42,7 @@ export default function Inicio() {
               </div>
               <div className={estilos.vantagens__item}>
                 <img src={estrela} alt="ícone de uma estrela" />
-                <h3>Programa de pontos</h3>
+                <h3 data-test="h3AcumularPontos">Programa de pontos</h3>
                 <p data-test="acumularPontos">
                   Você pode acumular pontos com suas compras no crédito sem
                   pagar mensalidade!
@@ -53,7 +53,7 @@ export default function Inicio() {
                   src={dispositivo}
                   alt="ícone de um dispositivo como notebook"
                 />
-                <h3>Seguro Dispositivos</h3>
+                <h3 data-test="h3SeguroDispositivos">Seguro Dispositivos</h3>
                 <p data-test="dispositivosProtegidos">
                   Seus dispositivos móveis (computador e laptop) protegidos por
                   uma mensalidade simbólica.
