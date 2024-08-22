@@ -3,7 +3,20 @@ describe('Página Principal', () => {
     beforeEach( () => {
 			cy.visit('http://localhost:3000/')
 		})
-    cy.getByData('titulo-principal').contains('Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!')
+    it('Deve renderizar o titulo principal com o texto correto', () => {
+      cy.getByData('titulo-principal').contains('Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!')
+      })
+    })
+
+  it('Deve carregar os h2', () => {
+    cy.getByData('Vantagensh2').contains('Vantagens do nosso banco:')
+  })
+
+    it('Deve renderizar os h3', () => {
+    cy.getByData('h3ContaGratuita').contains('Conta e cartão gratuitos')
+    cy.getByData('h3SacarGratuitamente').contains('Saques sem custo')
+    cy.getByData('h3AcumularPontos').contains('Programa de pontos')
+    cy.getByData('h3SeguroDispositivos').contains('Seguro Dispositivos')
   })
 
   it('Deve renderizar textos de vantagens', () => {
@@ -13,10 +26,11 @@ describe('Página Principal', () => {
     cy.getByData('dispositivosProtegidos').contains('Seus dispositivos móveis (computador e laptop) protegidos por uma mensalidade simbólica.')
   })
 
-  it('Deve renderizar os h3', () => {
-    cy.getByData('h3ContaGratuita').contains('Conta e cartão gratuitos')
-    cy.getByData('h3SacarGratuitamente').contains('Saques sem custo')
-    cy.getByData('h3AcumularPontos').contains('Programa de pontos')
-    cy.getByData('h3SeguroDispositivos').contains('Seguro Dispositivos')
+  it('Deve carregar as imagens', () => {
+    cy.getByData('imagem01')
+    cy.getByData('imagem02')
+    cy.getByData('imagem03')
+    cy.getByData('imagem04')
+    cy.getByData('imagem05')
   })
 })
